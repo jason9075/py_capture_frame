@@ -12,10 +12,10 @@ def main():
 
     source = args.source
 
-    camera = cv2.VideoCapture(source)
+    camera = cv2.VideoCapture(0)
     for i in range(3):
         return_value, image = camera.read()
-        cv2.imwrite('c_{}.jpg'.format(i), image)
+        cv2.imwrite('c_{}.jpg'.format(i), cv2.resize(image, (640, 360)))
 
 
 if __name__ == '__main__':
