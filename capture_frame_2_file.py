@@ -15,7 +15,7 @@ def main():
     camera = cv2.VideoCapture(source)
     for i in range(3):
         return_value, image = camera.read()
-        cv2.imwrite('c_{}.jpg'.format(source, i), image)
+        cv2.imwrite('c_{}.jpg'.format(i), image)
 
 
 if __name__ == '__main__':
